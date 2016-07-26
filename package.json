@@ -1,0 +1,35 @@
+{
+  "name": "nodejsBootstrap",
+  "version": "1.0.1",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Schmidt",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-core": ">=6.0.1",
+    "bootstrap": "^3.3.6",
+    "grunt": ">=0.4.5",
+    "grunt-autoprefixer": ">=3.0.4",
+    "grunt-contrib-clean": ">=1.0.0",
+    "grunt-contrib-cssmin": ">=1.0.1",
+    "grunt-contrib-htmlmin": ">=2.0.0",
+    "grunt-contrib-imagemin": ">=1.0.1",
+    "grunt-contrib-less": ">=1.2.0",
+    "grunt-contrib-uglify": ">=2.0.0",
+    "grunt-contrib-watch": ">=0.6.1",
+    "imagemin": ">=5.2.0",
+    "imagemin-mozjpeg": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imagepixel/NodeJSbootstrap.git"
+  },
+  "dependencies": {},
+  "description": "<a target=\"_blank\" href=\"http://www.imagepixel.de\"><img src=\"http://www.imagepixel.de/img/logo.png\" alt=\"www.magepixel.de\"></a>",
+  "bugs": {
+    "url": "https://github.com/imagepixel/NodeJSbootstrap/issues"
+  },
+  "homepage": "https://github.com/imagepixel/NodeJSbootstrap#readme"
+}
