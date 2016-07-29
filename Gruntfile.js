@@ -6,7 +6,7 @@ module.exports = function(grunt){
             // all tasks running when less file was changed
              less: {
                 files: ["src/less/*.less"],
-                tasks: ['less', 'autoprefixer', 'cssmin', 'uglify']
+                tasks: ['less', 'autoprefixer', 'cssmin']
             },
 
             //uglify js running if you change any file in src/js folder
@@ -36,7 +36,7 @@ module.exports = function(grunt){
                     paths: ["css"],
                 },
                 files: {
-                    // dest            :  source
+                    // build            :  source
                     "src/css/style.css": "src/less/style.less"
                 }
             },
@@ -48,9 +48,9 @@ module.exports = function(grunt){
             options: {
                browers: ['> 0.5%', '>0.5% in DE', 'last 2 versions', 'Firefox >20', 'Opera >8', 'Chrome >29', 'ie >8']
             },
-            dist: {
+            build: {
                 files: {
-                    //dest      :  source
+                    //build      :  source
                     'src/css/autoprefix.css': 'src/css/style.css'
                 }
             }
@@ -64,26 +64,26 @@ module.exports = function(grunt){
           },
           target: {
             files: {
-                 //dest        : source
-              'dest/assets/css/style.min.css'  : 'src/css/autoprefix.css'
+                 //build        : source
+              'build/assets/css/style.min.css'  : 'src/css/autoprefix.css'
               }
             }
           },
 
         //uglify JavaScript
         uglify: {
-            dist: {
+            build: {
                 files: {
-                    //dest                 : source
-                    'dest/assets/js/main.min.js': 'src/js/main.js',
-                    'dest/assets/js/thirdparty.min.js': 'src/js/thirdparty/*.js',
+                    //build                 : source
+                    'build/assets/js/main.min.js': 'src/js/main.js',
+                    'build/assets/js/thirdparty.min.js': 'src/js/thirdparty/*.js',
                 }
             }
       },
 
 
         imagemin: {                          // Task              
-            dist: { 
+            build: { 
                 options: {
                     optimizationLevel: 5
                 },
@@ -92,13 +92,13 @@ module.exports = function(grunt){
                 expand: true,                  // Enable dynamic expansion
                 cwd: 'src/img/',                   // Src matches are relative to this path
                 src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-                dest: 'dest/assets/img/'                  // Destination path prefix
+                build: 'build/assets/img/'                  // buildination path prefix
               }]
             }
         },
 
         htmlmin: {                                     // Task
-            dist: {                                      // Target
+            build: {                                      // Target
               options: {                                 // Target options
                 useShortDoctype: true,
                 collapseWhitespace: true,
@@ -107,7 +107,7 @@ module.exports = function(grunt){
               },
 
               files: {                                   // Dictionary of files
-                'dest/index.php': 'src/index.php'     // 'destination': 'source'
+                'build/index.php': 'src/index.php'     // 'buildination': 'source'
               }
             },
          },
@@ -122,5 +122,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'htmlmin', 'watch' ]);
 };

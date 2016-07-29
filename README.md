@@ -16,8 +16,8 @@ Bootstrap v3.3.6 <br>
 6. edit src/js/files
 7. add a few images in src/img/
 8. edit src/index.php or add a few files to Gruntfile.js
-9. find the new files in dest/ folder
-10. put afew third-party JAvaScript files in src/js/thirdparty folder 
+9. find the new files in build/ folder
+10. put afew third-party JavaScript files in src/js/thirdparty folder 
 11. enjoy ;)
 
 
