@@ -75,8 +75,7 @@ module.exports = function(grunt){
             build: {
                 files: {
                     //build                 : source
-                    'build/assets/js/main.min.js': 'src/js/main.js',
-                    'build/assets/js/thirdparty.min.js': 'src/js/thirdparty/*.js',
+                    'build/assets/js/main.min.js': 'src/js/main.js'
                 }
             }
       },
@@ -92,7 +91,7 @@ module.exports = function(grunt){
                 expand: true,                  // Enable dynamic expansion
                 cwd: 'src/img/',                   // Src matches are relative to this path
                 src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-                build: 'build/assets/img/'                  // buildination path prefix
+                dest: 'build/assets/img/'                  // buildination path prefix
               }]
             }
         },

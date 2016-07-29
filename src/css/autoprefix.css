@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -6669,13 +6669,7 @@ button.close {
     display: none !important;
   }
 }
-/*Your styles here */
-li {
-  padding: 0;
-}
-li a {
-  padding: 10px;
-}
-li a:hover {
-  color: #000;
-}
+/*==================================
+=            Your style            =
+==================================*/
+/*=====  End of Your style  ======*/
